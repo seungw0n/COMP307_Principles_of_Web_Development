@@ -15,6 +15,6 @@
 ----
 
 #### A3 :
-> Create a simple spreadsheet and implement simple functions. 
+> Create a simple spreadsheet with some simple functions using DOM.
 >> HTML && CSS && JavaScript
 ----
