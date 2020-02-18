@@ -1,6 +1,5 @@
 """
 NAME: JOENG, SEUNG WON
-STUDENT NUMBER: 260735232
 """
 import sys
 # To use arguments
