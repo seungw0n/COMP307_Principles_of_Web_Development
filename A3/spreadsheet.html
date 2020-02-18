@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Spreadsheet</title>
+    <style type="text/css">
+        td {
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="0" cellpadding="0" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Student ID</th>
+                <th>Faculty</th>
+                <th>Major</th>
+                <th>Minor</th>
+                <th>Year</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="table_body">
+            <tr onclick="highLight(this)">
+                <td><input type="text" /></td>
+                <td><input type="text" /></td>
+                <td><input type="text" /></td>
+                <td><input type="text" /></td>
+                <td><input type="text" /></td>
+                <td><input type="text" /></td>
+                <td>
+                    <button onclick="up(this)">Up</button>
+                    <button onclick="down(this)">Dn</button>
+                    <button onclick="deleteRow(this)">Del</button>
+                </td>
+            </tr>
+            <tr onclick="highLight(this)">
+                <td><input type="text" /></td>
+                <td><input type="text" /></td>
+                <td><input type="text" /></td>
+                <td><input type="text" /></td>
+                <td><input type="text" /></td>
+                <td><input type="text" /></td>
+                <td>
+                    <button onclick="up(this)">Up</button>
+                    <button onclick="down(this)">Dn</button>
+                    <button onclick="deleteRow(this)">Del</button>
+                </td>
+            </tr>
+            <tr onclick="highLight(this)">
+                <td><input type="text" /></td>
+                <td><input type="text" /></td>
+                <td><input type="text" /></td>
+                <td><input type="text" /></td>
+                <td><input type="text" /></td>
+                <td><input type="text" /></td>
+                <td>
+                    <button onclick="up(this)">Up</button>
+                    <button onclick="down(this)">Dn</button>
+                    <button onclick="deleteRow(this)">Del</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="newRowBtn" onclick="insertNewRow()">New row</button>
+    <script>
+        function up(element)
+        {
+            var obj = element.parentNode.parentNode; // obj = one tr
+            //console.log(obj);
+            if(obj.rowIndex != 1)
+            {
+                var pos = obj.previousElementSibling;
+                // console.log(pos);
+                document.getElementById("table_body").insertBefore(obj, pos);
+            }
+        }
+
+        function down(element)
+        {
+            var obj = element.parentNode.parentNode;
+            var rowLen = document.getElementById("table_body").rows.length;
+
+            //console.log(obj);
+            //console.log(obj.rowIndex);
+            //console.log(rowLen);
+
+            if(obj.rowIndex < rowLen)
+            {
+                var pos = obj.nextElementSibling.nextElementSibling;
+                document.getElementById("table_body").insertBefore(obj, pos)
+            }
+        }
+
+        function deleteRow(element) {
+            element.parentNode.parentNode.remove();
+        }
+
+        function insertNewRow()
+        {
+            var tableBody = document.getElementById("table_body");
+            // console.log(tableBody);
+            var newRow = document.createElement("tr");
+            // console.log(newRow);
+
+            for(i = 0; i < 6; i++)
+            {
+                var td = document.createElement("td");
+                var input = document.createElement("input");
+                var attribute = document.createAttribute("type");
+                attribute.value = "text";
+                input.setAttributeNode(attribute);
+                td.appendChild(input);
+                newRow.appendChild(td);
+            }
+
+            var td = document.createElement("td");
+
+            var upButton = document.createElement("button");
+            var upText = document.createTextNode("Up");
+            upButton.setAttribute("onclick", "up(this)");
+            upButton.appendChild(upText);
+
+            var downButton = document.createElement("button");
+            var downText = document.createTextNode("Dn");
+            downButton.setAttribute("onclick", "down(this)");
+            downButton.appendChild(downText);
+
+            var deleteButton = document.createElement("button");
+            var deleteText = document.createTextNode("Del");
+            deleteButton.setAttribute("onclick", "deleteRow(this)");
+            deleteButton.appendChild(deleteText);
+
+            td.appendChild(upButton);
+            td.appendChild(document.createTextNode(" "))
+            td.appendChild(downButton);
+            td.appendChild(document.createTextNode(" "))
+            td.appendChild(deleteButton);
+
+            newRow.appendChild(td);
+
+            tableBody.appendChild(newRow);
+        }
+
+        function highLight(element)
+        {
+            var trList = document.getElementsByTagName("tr");
+            console.log(trList);
+            for(i = 0; i < trList.length; i++)
+            {
+                trList[i].style.backgroundColor = "white";
+            }
+            var current = element;
+            current.style.backgroundColor = "yellow";
+        }
+    </script>
+</body>
+
+</html>
