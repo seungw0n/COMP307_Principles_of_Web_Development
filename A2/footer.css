@@ -1,0 +1,30 @@
+.my-footer {
+    background-color:lightgrey;
+    padding:10px;
+    font-size:15px;
+    line-height:15px;
+    color:black;
+}
+.my-footer hr {
+    border-top-color:#bbb;
+    opacity:1.0
+}
+.my-footer hr.small {
+    margin:20px 0
+}
+.my-footer h6 {
+    color:black;
+    font-size:18px;
+    text-transform:uppercase;
+    margin-top:10px;
+    letter-spacing:2px
+}
+.my-footer a {
+    color:black;
+}
+.my-footer a:hover {
+    border-bottom: 0.5px solid black;
+}
+.copyright-info {
+    margin:0
+}

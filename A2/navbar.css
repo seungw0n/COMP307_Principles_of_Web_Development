@@ -1,0 +1,35 @@
+.sticky_nav {
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .25em;
+    height: 35px;
+}
+
+.topnav {
+    list-style: none;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+}
+
+.topnav li {
+    padding: 0;
+    margin: 0;
+}
+
+.topnav li a {
+    padding: 1em;
+    font-size: 15px;
+    display: flex;
+    align-items: flex-end;
+    color: black;
+    border-bottom: 3px solid transparent;
+}
+
+.topnav li a:hover{
+    border-bottom: 3px solid black;
+}

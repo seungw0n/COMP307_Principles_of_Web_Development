@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!--
+NAME: JOENG, SEUNG WON
+STUDENT NUMBER: 260735232
+-->
+<html>
+    <head>
+        <title>My homepage</title>
+        <meta charset="utf-8">
+        <meta name="project" content="marketplace">
+        <meta name="preferred-role" content="indifferent">
+        <meta name="work-schedule" content="morning">
+
+        <!-- CSS Parts -->
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="info_table.css">
+        <link rel="stylesheet" href="footer.css">
+
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .myPic {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+
+            .intro {
+                padding:10px;
+                line-height:15px;
+                color:black;
+                font-size:13px;
+                text-transform:uppercase;
+                margin-top:1px;
+                letter-spacing:2px;
+            }
+
+            h2 {
+                padding:10px;
+                line-height:15px;
+                color:black;
+                font-size:15px;
+                text-transform:uppercase;
+                margin-top:1px;
+                letter-spacing:2px;
+            }
+
+            section {
+                margin-bottom: 50px;
+            }
+
+            .my-description {
+                margin-left: 30px;
+            }
+
+            .idea-lists {
+                margin-left: 50px;
+                margin-bottom: 30px;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <!--Top navigation bar -->
+        <nav class="sticky_nav">
+            <ul class="topnav">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="mailto:seung.joeng@mail.mcgill.ca" target="_blank">Email</a></li>
+                <li><a href="https://www.instagram.com/steven_joeng/" target="_blank">Instagram</a></li>
+                <li><a href="https://www.facebook.com/seungwon.jeong.773" target="_blank">Facebook</a></li>
+                <li><a href="https://github.com/seungw0n" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+
+
+        <header>
+            <div class="intro">
+                <h1>Welcome!</h1>
+                <hr>
+            </div>
+        </header>
+
+
+        <section>
+            <h2>Profile Picture</h2>
+            <img class="myPic" src="myPicture.jpg" alt="My Picture" style="width:246px;height:322px">
+        </section>
+
+        <section>
+            <article class="description-section">
+                <h2>Description</h2>
+                <p class="my-description">
+                    Hello! My name is Steven, and I am U2, majoring Computer Science :)
+                    <br><br>I had an experience as a backend developer at <a href="https://www.crewmxt.com" target="_blank">MxT<a>
+                    <br><br>Contact me via email or any other SNS I provided!
+                </p>
+
+            </article>
+        </section>
+
+        <section>
+            <h2>General informations</h2>
+            <table class="table-info" align="center">
+                <thead>
+                    <tr>
+                        <th scope="cols">INFO</th>
+                        <th scope="cols"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Legal Name</th>
+                        <td>JOENG, SEUNG WON</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Preferred Name</th>
+                        <td>STEVEN</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Date Of Birth</th>
+                        <td>OCT 17 1997</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Contact</th>
+                        <td>seung.joeng@mail.mcgill.ca</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <div class="project-idea">
+            <h2>Project Idea</h2>
+            <div class="idea-lists">
+                <p>I am interested in "Online marketplace for buy and sell", and I prefer back-end programming.</p>
+                <p>Back-End:</p>
+                <li>Using the session/cookie provided by Django to log-in our platform.</li>
+                <li>Using OAuth2.0 to use third-party accounts to log-in our platform.</li>
+                <li>Using Business/Company API to make successful payments with third-party accounts.</li>
+                <li>Using MongoDB or MySQL to save data.</li>
+            </div>
+        </div>
+        <footer class="my-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="section-about">
+                        <h6>About</h6>
+                        <p class="text-justify">This webpage is for COMP 307 Assignment 2.</p>
+                    </div>
+                    <hr>
+                    <div class="column-one">
+                        <h6>Links to contact me</h6>
+                        <ul class="footer-links">
+                            <li><a href="mailto:seung.joeng@mail.mcgill.ca" target="_blank">Email</a></li>
+                            <li><a href="https://www.facebook.com/seungwon.jeong.773" target="_blank">My Facebook</a></li>
+                            <li><a href="https://github.com/seungw0n" target="_blank">My Github</a></li>
+                            <li><a href="https://www.instagram.com/steven_joeng/" target="_blank">My Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <p class="copyright-info">
+                            Copyright &copy; 2020 All Rights will be Reserved by JOENG, SEUNG WON
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+</html>

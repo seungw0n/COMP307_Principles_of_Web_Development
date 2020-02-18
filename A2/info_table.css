@@ -1,0 +1,28 @@
+.table-info {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+
+}
+.table-info thead th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #369;
+    border-bottom: 3px solid #036;
+}
+.table-info tbody th {
+    width: 150px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    background: #f3f6f7;
+}
+.table-info td {
+    width: 350px;
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}
